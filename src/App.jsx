@@ -6,24 +6,28 @@ import calculator from './img/calculator.png';
 import mobile_1 from './img/mobile_example_1.bmp';
 import mobile_2 from './img/mobile_example_2.png';
 import social_media from './img/social_media.png';
-
+import { FaLanguage } from 'react-icons/fa';
+import './styles/App.scss';
 
 function Portfolio() {
   return (
     <div>
-      <header style={{ backgroundColor: '#333', color: '#fff', padding: '20px', textAlign: 'center' }}>
-        <nav style={{ display: 'flex', justifyContent: 'flex-end' }}>
-          <ul style={{ listStyleType: 'none', padding: '0', margin: '0', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-            <li style={{ marginRight: '20px' }}><a href="#experiencia">Experiencia Laboral</a></li>
-            <li style={{ marginRight: '20px' }}><a href="#habilidades">Habilidades</a></li>
-            <li style={{ marginRight: '20px' }}><a href="#desarrollos">Desarrollos en Syncstark</a></li>
-            <li><a href="#otros">Otros desarrollos</a></li>
+      <header className="portfolio-header" style={{ backgroundColor: '#333', color: '#fff', padding: '20px', textAlign: 'center' }}>
+        <nav className="portfolio-nav" style={{ display: 'flex', justifyContent: 'flex-end' }}>
+          <ul className="portfolio-nav-list" style={{ listStyleType: 'none', padding: '0', margin: '0', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+            <li className="portfolio-nav-item" style={{ marginRight: '20px' }}><a href="#experiencia">Experiencia Laboral</a></li>
+            <li className="portfolio-nav-item" style={{ marginRight: '20px' }}><a href="#habilidades">Habilidades</a></li>
+            <li className="portfolio-nav-item" style={{ marginRight: '20px' }}><a href="#desarrollos">Desarrollos en Syncstark</a></li>
+            <li className="portfolio-nav-item"><a href="#otros">Otros desarrollos</a></li>
           </ul>
         </nav>
 
 
         <h1>Fernando Gastón Pavón</h1>
         <p>Desarrollador FullStack</p>
+        <div className="language-icon">
+          <FaLanguage size={30} />
+        </div>
       </header>
       <div style={{ maxWidth: '800px', margin: '20px auto', padding: '0 20px' }}>
         <section id='experiencia'>
@@ -50,7 +54,7 @@ function Portfolio() {
             <li>Laravel</li>
           </ul>
         </section>
-        <section id='desarrollos'>
+        <section id='desarrollos' className="portfolio-content">
           <h1>Desarrollos en Syncstark</h1>
         </section>
         <section>
@@ -97,9 +101,9 @@ function Portfolio() {
         </section>
       </div>
 
-      <footer style={{ backgroundColor: '#333', color: '#fff', padding: '20px', textAlign: 'center', display: 'flex', justifyContent: 'center' }}>
+      <footer className="portfolio-footer" style={{ backgroundColor: '#333', color: '#fff', padding: '20px', textAlign: 'center' }}>
         <h3 style={{ marginRight: '20px' }}>Contáctame:</h3>
-        <ul style={{ listStyleType: 'none', padding: '0', display: 'flex', alignItems: 'center' }}>
+        <ul style={{ listStyleType: 'none', padding: '0', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <li style={{ marginRight: '20px' }}><a href="mailto:max9977raw@gmail.com" target='new'>Email</a></li>
           <li style={{ marginRight: '20px' }}><a href="https://www.linkedin.com/in/fernando-pavon-65467516a/" target='new'>LinkedIn</a></li>
           <li><a href="https://github.com/Ferdinand77Raw" target='new'>GitHub</a></li>
